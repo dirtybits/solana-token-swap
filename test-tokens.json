@@ -1,7 +1,17 @@
 {
   "wallet": "asuavUDGmrVHr4oD1b4QtnnXgtnEcBa8qdkfZz7WZgw",
-  "tokenMintA": "EtMp8NmiK6adTqr2kB8xMrnH1Qa7AoQnFANjRFXV3n9v",
-  "tokenMintB": "A9zxAx4JTM3SDmBDRnLeeJV3eCYXpEpEcqy8TEPfhB1t",
-  "tokenAccountA": "FeVAC47uaSYWEQdF7Cb8TQTULTixHVrcUTDmcegDubmZ",
-  "tokenAccountB": "3RUK3wfXMYFdwsJVZdnNpwLa1VhhuvpX4BLxYPExUJNJ"
+  "tokenMintA": "Lp123GNQRuWXMM2bdxEpP8HLp6rMMCZzNwxh9bJ3aHL",
+  "tokenMintB": "J48rqp8TXukcqdp7q3uVuxyCJ6MdBfAZkKF98tXR2wAC",
+  "tokenAccountA": "9kNLGCz9yFRFSaENWutFVaC5J49DhwLaXJCvffgy5RCS",
+  "tokenAccountB": "2jdr4HH4ZWgv8em9qVM3R81m7acrqWxPXyB7JNEg8Buo",
+  "tokens": {
+    "tokenA": {
+      "name": "My Token A",
+      "symbol": "TKNA"
+    },
+    "tokenB": {
+      "name": "My Token B",
+      "symbol": "TKNB"
+    }
+  }
 }
