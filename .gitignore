@@ -4,5 +4,32 @@ target
 **/*.rs.bk
 node_modules
 test-ledger
-dist
 .tap
+
+# Keypairs - NEVER commit private keys!
+*-keypair.json
+*.json
+!package.json
+!package-lock.json
+!tsconfig*.json
+!Cargo.lock
+!prettier.config.js
+!target/idl/*.json
+!target/types/*.ts
+
+# Local test data
+test-tokens.json
+legacy-tokens.json
+
+# Build artifacts
+dist
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local

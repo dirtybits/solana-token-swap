@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Smooth transitions */
+button, input {
+  transition: all 0.2s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1f3a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a6578;
+}
+
+/* Wallet button custom styling */
+.wallet-adapter-button {
+  background: linear-gradient(90deg, #14F195 0%, #9945FF 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.wallet-adapter-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(153, 69, 255, 0.4) !important;
+}
+
+.wallet-adapter-button:not([disabled]):hover {
+  background: linear-gradient(90deg, #14F195 0%, #9945FF 100%) !important;
+}
+
+.wallet-adapter-modal-wrapper {
+  background: rgba(10, 14, 39, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.wallet-adapter-modal {
+  background: #1a1f3a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+}
+
+.wallet-adapter-modal-title {
+  color: #fff !important;
+}
+
+.wallet-adapter-modal-list {
+  background: transparent !important;
+}
+
+.wallet-adapter-button-trigger {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #e0e0e0 !important;
+}
+
+.wallet-adapter-button-trigger:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(153, 69, 255, 0.3) !important;
+}
+
+/* Input focus states */
+input:focus {
+  border-color: rgba(153, 69, 255, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(153, 69, 255, 0.1) !important;
+  outline: none !important;
+}
+

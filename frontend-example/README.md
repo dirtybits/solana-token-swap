@@ -55,3 +55,6 @@ programClient.ESCROW_PROGRAM_ADDRESS
 3. Get testnet SOL and tokens
 4. Create and take offers
 
+## Credits
+
+Based on [anchor-escrow-2025](https://github.com/quiknode-labs/you-will-build-a-solana-program) by QuikNode Labs.

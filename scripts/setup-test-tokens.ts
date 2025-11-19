@@ -6,8 +6,16 @@ import {
   createMint,
   getOrCreateAssociatedTokenAccount,
   mintTo,
-  TOKEN_PROGRAM_ID,
+  TOKEN_2022_PROGRAM_ID,
+  createInitializeMetadataPointerInstruction,
+  createInitializeMintInstruction,
+  getMintLen,
+  ExtensionType,
+  LENGTH_SIZE,
+  TYPE_SIZE,
 } from '@solana/spl-token';
+import { createInitializeInstruction, pack } from '@solana/spl-token-metadata';
+import { Transaction, SystemProgram, sendAndConfirmTransaction } from '@solana/web3.js';
 import * as fs from 'fs';
 
 async function main() {

@@ -10,6 +10,11 @@ pub mod error;
 pub mod handlers;
 pub mod state;
 
+#[cfg(test)]
+mod escrow_test_helpers;
+#[cfg(test)]
+mod tests;
+
 declare_id!("GrHFY4E7GFtzcTfHcoFV7V1MumQdenQqDYbMC6W3ysG2");
 
 #[program]

@@ -6,10 +6,12 @@ import { clusterApiUrl } from '@solana/web3.js';
 import '@solana/wallet-adapter-react-ui/styles.css';
 import { MakeOffer } from './components/MakeOffer';
 import { ViewOffers } from './components/ViewOffers';
+import { TransactionHistory } from './components/TransactionHistory';
+import { config } from './config';
 
 function App() {
-  // Connect to testnet
-  const endpoint = useMemo(() => clusterApiUrl('testnet'), []);
+  // Connect to configured network
+  const endpoint = useMemo(() => clusterApiUrl(config.network), []);
   
   // Setup wallet adapters
   const wallets = useMemo(
@@ -21,15 +23,52 @@ function App() {
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
-          <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-            <header style={{ marginBottom: '40px' }}>
-              <h1>Escrow Program</h1>
-              <WalletMultiButton />
-            </header>
-            
-            <div style={{ display: 'grid', gap: '20px' }}>
-              <MakeOffer />
-              <ViewOffers />
+          <div style={{ 
+            minHeight: '100vh',
+            background: 'linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%)',
+          }}>
+            <div style={{ 
+              maxWidth: '1400px', 
+              margin: '0 auto',
+              padding: '40px 20px',
+            }}>
+              <header style={{ 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center',
+                marginBottom: '60px',
+                padding: '20px 0',
+              }}>
+                <div>
+                  <h1 style={{ 
+                    fontSize: '32px', 
+                    fontWeight: '700',
+                    background: 'linear-gradient(90deg, #14F195 0%, #9945FF 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    marginBottom: '8px',
+                  }}>
+                    Token Swap
+                  </h1>
+                  <p style={{ color: '#9ca3af', fontSize: '14px' }}>
+                    Decentralized escrow on Solana
+                  </p>
+                </div>
+                <WalletMultiButton />
+              </header>
+              
+              <div style={{ 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                gap: '24px',
+              }}>
+                <MakeOffer />
+                <ViewOffers />
+              </div>
+              
+              <div style={{ marginTop: '24px' }}>
+                <TransactionHistory />
+              </div>
             </div>
           </div>
         </WalletModalProvider>
