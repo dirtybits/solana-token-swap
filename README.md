@@ -47,6 +47,13 @@ npm install
 cd frontend-example
 npm install
 cd ..
+
+```
+### Setup
+
+```bash
+# Add this line to your .zshrc - for consistency
+export RUSTUP_TOOLCHAIN="nightly-2024-04-16"
 ```
 
 ### Configuration
